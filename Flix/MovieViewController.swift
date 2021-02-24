@@ -68,6 +68,10 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.titleLabel.text = title
         cell.synopsisLabel.text = synopsis
         
+        // set round corners
+        cell.posterView.layer.cornerRadius = 10
+        cell.posterView.clipsToBounds = true
+        
         // process for image
         let baseUrl = "https://image.tmdb.org/t/p/w185"
         let posterPath = movie["poster_path"] as! String

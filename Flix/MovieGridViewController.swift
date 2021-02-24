@@ -60,6 +60,10 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
         
         cell.posterView.af_setImage(withURL: posterUrl!)
         
+        // round corners -> postertView
+        cell.posterView.layer.cornerRadius = 10
+        cell.posterView.clipsToBounds = true
+        
         return cell
     }
 

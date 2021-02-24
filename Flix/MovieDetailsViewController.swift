@@ -34,6 +34,10 @@ class MovieDetailsViewController: UIViewController {
         posterView.isUserInteractionEnabled = true
         posterView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imageTap)))
         
+        //posterView rounded corner
+        posterView.layer.cornerRadius = 20
+        posterView.clipsToBounds = true
+        
         // process for image
         let baseUrl = "https://image.tmdb.org/t/p/w185"
         let posterPath = movie["poster_path"] as! String
